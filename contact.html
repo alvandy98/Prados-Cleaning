@@ -10,33 +10,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
-
-<script>
-  const themeToggle = document.getElementById("themeToggle");
-  const toggleIcon = document.querySelector(".toggle-icon");
-  const toggleText = document.querySelector(".toggle-text");
-
-  function setTheme(mode) {
-    if (mode === "dark") {
-      document.body.classList.add("dark-mode");
-      localStorage.setItem("theme", "dark");
-      toggleIcon.textContent = "☀";
-      toggleText.textContent = "Light";
-    } else {
-      document.body.classList.remove("dark-mode");
-      localStorage.setItem("theme", "light");
-      toggleIcon.textContent = "☾";
-      toggleText.textContent = "Dark";
-    }
-  }
-
-  setTheme(localStorage.getItem("theme") || "light");
-
-  themeToggle.addEventListener("click", () => {
-    const isDark = document.body.classList.contains("dark-mode");
-    setTheme(isDark ? "light" : "dark");
-  });
-</script>
   
 <body>
 
@@ -101,5 +74,32 @@
   </div>
 </footer>
 
+<script>
+  const themeToggle = document.getElementById("themeToggle");
+  const toggleIcon = document.querySelector(".toggle-icon");
+  const toggleText = document.querySelector(".toggle-text");
+
+  function setTheme(mode) {
+    if (mode === "dark") {
+      document.body.classList.add("dark-mode");
+      localStorage.setItem("theme", "dark");
+      toggleIcon.textContent = "☀";
+      toggleText.textContent = "Light";
+    } else {
+      document.body.classList.remove("dark-mode");
+      localStorage.setItem("theme", "light");
+      toggleIcon.textContent = "☾";
+      toggleText.textContent = "Dark";
+    }
+  }
+
+  setTheme(localStorage.getItem("theme") || "light");
+
+  themeToggle.addEventListener("click", () => {
+    const isDark = document.body.classList.contains("dark-mode");
+    setTheme(isDark ? "light" : "dark");
+  });
+</script>
+  
 </body>
 </html>
