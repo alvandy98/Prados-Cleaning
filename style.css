@@ -97,6 +97,19 @@ body.dark-mode .brand img {
   text-transform: uppercase;
 }
 
+.call-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #c2a878;
+  color: #0f0f10;
+  padding: 12px 18px;
+  border-radius: 999px;
+  font-weight: 600;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  z-index: 999;
+}
+
 .nav-links {
   display: flex;
   align-items: center;
