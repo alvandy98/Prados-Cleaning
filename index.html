@@ -21,30 +21,41 @@
 <div class="announcement">Residential & Commercial Cleaning • Servicing Utah State • Call/Text 385.477.8598</div>
 <header class="navbar">
   <div class="container nav-inner">
+
     <a class="brand" href="index.html">
-      <img src="Logo.png" alt="Prado's Cleaning Logo">
+      <img src="images/logo.png" alt="Prado’s Cleaning LLC Logo">
     </a>
-    <nav class="nav-links">
+
+    <button class="mobile-menu-toggle" id="mobileMenuToggle" type="button" aria-label="Open menu">
+      ☰
+    </button>
+
+    <nav class="nav-links" id="navLinks">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
+
       <div class="dropdown">
-        <a href="services.html">Services</a>
+        <button class="dropdown-toggle" type="button">
+          Services <span>⌄</span>
+        </button>
+
         <div class="dropdown-menu">
-          <a href="services.html#commercial">Commercial</a>
-          <a href="services.html#construction">Construction</a>
-          <a href="services.html#residential-property">Residential & Property Services</a>
-  </div>
-</div>
+          <a href="services.html#commercial">🏢 Commercial</a>
+          <a href="services.html#construction">🧹 Construction</a>
+          <a href="services.html#residential-property">🏡 Residential & Property Services</a>
+        </div>
+      </div>
+
       <a href="gallery.html">Gallery</a>
       <a href="reviews.html">Reviews</a>
       <a class="nav-cta" href="contact.html">Request a Quote</a>
+
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode">
+        <span class="toggle-icon">☾</span>
+        <span class="toggle-text">Dark</span>
+      </button>
     </nav>
 
-    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode">
-      <span class="toggle-icon">☾</span>
-      <span class="toggle-text">Dark</span>
-    </button>
-    
   </div>
 </header>
 
