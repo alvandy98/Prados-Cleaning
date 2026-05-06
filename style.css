@@ -21,10 +21,7 @@ body {
   transition: background 0.3s ease, color 0.3s ease;
 }
 
-h1,
-h2,
-h3,
-.logo-text {
+h1, h2, h3, .logo-text {
   font-family: "Playfair Display", Georgia, serif;
   font-weight: 600;
 }
@@ -44,6 +41,7 @@ img {
   margin: 0 auto;
 }
 
+/* Top announcement */
 .announcement {
   background: var(--black);
   color: var(--ivory);
@@ -53,6 +51,7 @@ img {
   letter-spacing: 0.04em;
 }
 
+/* Navigation */
 .navbar {
   background: rgba(245, 243, 239, 0.94);
   border-bottom: 1px solid var(--border);
@@ -76,28 +75,20 @@ img {
   gap: 0.7rem;
 }
 
+/* Logo sizing, hover effect, dark mode support */
 .brand img {
-  height: 40px;
+  height: 52px;
   width: auto;
+  transition: transform 0.25s ease, opacity 0.25s ease, filter 0.25s ease;
 }
 
-.moon-mark {
-  width: 34px;
-  height: 34px;
-  border: 2px solid var(--gold);
-  border-radius: 50%;
-  position: relative;
+.brand:hover img {
+  transform: translateY(-1px) scale(1.03);
+  opacity: 0.92;
 }
 
-.moon-mark::after {
-  content: "";
-  width: 31px;
-  height: 31px;
-  background: var(--ivory);
-  border-radius: 50%;
-  position: absolute;
-  left: 9px;
-  top: -1px;
+body.dark-mode .brand img {
+  filter: invert(1);
 }
 
 .logo-text {
@@ -142,7 +133,7 @@ img {
 
 .theme-toggle:hover {
   background: var(--gold);
-  color: var(--black);
+  color: #0f0f10;
   transform: translateY(-1px);
 }
 
@@ -151,13 +142,14 @@ img {
   height: 22px;
   border-radius: 50%;
   background: var(--gold);
-  color: var(--black);
+  color: #0f0f10;
   display: grid;
   place-items: center;
   font-size: 0.9rem;
   line-height: 1;
 }
 
+/* Hero */
 .hero {
   padding: 6rem 0 5rem;
   background:
@@ -165,7 +157,7 @@ img {
     url("images/hero-cleaning.jpg");
   background-size: cover;
   background-position: center;
-  color: var(--ivory);
+  color: #f5f3ef;
 }
 
 .hero-card {
@@ -214,9 +206,10 @@ img {
 
 .btn-secondary {
   border: 1px solid rgba(245, 243, 239, 0.7);
-  color: var(--ivory);
+  color: #f5f3ef;
 }
 
+/* Sections */
 .section {
   padding: 4.5rem 0;
 }
@@ -286,6 +279,7 @@ img {
   color: rgba(245, 243, 239, 0.78);
 }
 
+/* Pricing */
 .price-table {
   width: 100%;
   border-collapse: collapse;
@@ -314,6 +308,7 @@ img {
   border-bottom: none;
 }
 
+/* Gallery */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -334,11 +329,13 @@ img {
   padding: 1rem;
 }
 
+/* Reviews */
 .quote {
   font-size: 1.05rem;
   color: var(--black);
 }
 
+/* Contact */
 .contact-box {
   background: var(--soft-white);
   border-radius: 28px;
@@ -351,6 +348,7 @@ img {
   font-weight: 600;
 }
 
+/* Footer */
 .footer {
   background: #0f0f10;
   color: #f5f3ef;
@@ -367,6 +365,7 @@ img {
   font-size: 0.9rem;
 }
 
+/* Subpage Hero */
 .page-hero {
   padding: 4rem 0;
   background: #0f0f10;
@@ -417,8 +416,9 @@ body.dark-mode .theme-toggle:hover {
   color: #0f0f10;
 }
 
-body.dark-mode .moon-mark::after {
-  background: #0f0f10;
+body.dark-mode .toggle-icon {
+  background: #c2a878;
+  color: #0f0f10;
 }
 
 body.dark-mode .card,
@@ -449,6 +449,10 @@ body.dark-mode .gallery-item {
     flex-direction: column;
   }
 
+  .brand img {
+    height: 44px;
+  }
+
   .nav-links {
     width: 100%;
     flex-wrap: wrap;
@@ -467,5 +471,23 @@ body.dark-mode .gallery-item {
 
   .hero {
     padding: 4rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .brand img {
+    height: 38px;
+  }
+
+  .announcement {
+    font-size: 0.75rem;
+  }
+
+  .nav-links {
+    font-size: 0.84rem;
+  }
+
+  .hero h1 {
+    font-size: 2.4rem;
   }
 }
