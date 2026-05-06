@@ -51,6 +51,47 @@ img {
   letter-spacing: 0.04em;
 }
 
+/* Dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--soft-white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.5rem 0;
+  display: none;
+  min-width: 200px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  z-index: 999;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 0.6rem 1rem;
+  font-size: 0.9rem;
+}
+
+.dropdown-menu a:hover {
+  background: rgba(194,168,120,0.1);
+  color: var(--gold);
+}
+
+/* Show on hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Dark mode */
+body.dark-mode .dropdown-menu {
+  background: #181819;
+  border-color: rgba(255,255,255,0.1);
+}
+
 /* Navigation */
 .navbar {
   background: rgba(245, 243, 239, 0.94);
