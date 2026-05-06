@@ -77,7 +77,7 @@ img {
 
 /* Logo sizing, hover effect, dark mode support */
 .brand img {
-  height: 52px;
+  height: 60px;
   width: auto;
   transition: transform 0.25s ease, opacity 0.25s ease, filter 0.25s ease;
 }
