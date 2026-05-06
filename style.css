@@ -545,3 +545,126 @@ body.dark-mode .gallery-item {
     font-size: 2.4rem;
   }
 }
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Mobile menu button */
+.mobile-menu-toggle {
+  display: none;
+  border: 1px solid var(--gold);
+  background: rgba(194, 168, 120, 0.08);
+  color: var(--black);
+  padding: 0.55rem 0.8rem;
+  border-radius: 999px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* Click dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  border: none;
+  background: transparent;
+  color: var(--black);
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: 0;
+}
+
+.dropdown-toggle:hover {
+  color: var(--gold);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 160%;
+  left: 0;
+  min-width: 270px;
+  background: var(--soft-white);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 0.55rem;
+  box-shadow: 0 18px 45px rgba(15, 15, 16, 0.12);
+  display: none;
+  z-index: 999;
+}
+
+.dropdown.open .dropdown-menu {
+  display: grid;
+  gap: 0.2rem;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 0.75rem 0.9rem;
+  border-radius: 12px;
+  font-size: 0.88rem;
+}
+
+.dropdown-menu a:hover,
+.dropdown-menu a.active-section {
+  background: rgba(194, 168, 120, 0.14);
+  color: var(--gold);
+}
+
+/* Dark mode dropdown/mobile */
+body.dark-mode .mobile-menu-toggle,
+body.dark-mode .dropdown-toggle {
+  color: #f5f3ef;
+}
+
+body.dark-mode .dropdown-menu {
+  background: #181819;
+  border-color: rgba(245, 243, 239, 0.16);
+}
+
+/* Mobile navigation */
+@media (max-width: 820px) {
+  .nav-inner {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .mobile-menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.85rem;
+    padding: 1rem 0;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .dropdown {
+    width: 100%;
+  }
+
+  .dropdown-toggle {
+    font-size: 0.95rem;
+  }
+
+  .dropdown-menu {
+    position: static;
+    width: 100%;
+    box-shadow: none;
+    margin-top: 0.7rem;
+  }
+
+  .theme-toggle {
+    margin-top: 0.5rem;
+  }
+}
