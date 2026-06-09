@@ -25,7 +25,6 @@ body {
   background: var(--ivory);
   color: var(--black);
   line-height: 1.6;
-  transition: background 0.3s ease, color 0.3s ease;
 }
 
 h1,
@@ -61,7 +60,7 @@ img {
   letter-spacing: 0.04em;
 }
 
-/* Navigation */
+/* Navbar */
 .navbar {
   background: rgba(245, 243, 239, 0.94);
   border-bottom: 1px solid var(--border);
@@ -82,7 +81,6 @@ img {
 .brand {
   display: flex;
   align-items: center;
-  gap: 0.7rem;
 }
 
 .brand img {
@@ -94,12 +92,6 @@ img {
 .brand:hover img {
   transform: translateY(-1px) scale(1.03);
   opacity: 0.92;
-}
-
-.logo-text {
-  letter-spacing: 0.08em;
-  font-size: 1.05rem;
-  text-transform: uppercase;
 }
 
 .mobile-menu-toggle {
@@ -186,7 +178,7 @@ img {
   color: var(--gold);
 }
 
-/* Dark/Light Toggle */
+/* Theme Toggle */
 .theme-toggle {
   border: 1px solid var(--gold);
   background: rgba(194, 168, 120, 0.08);
@@ -221,17 +213,18 @@ img {
   line-height: 1;
 }
 
-/* Homepage Hero */
+/* Homepage Hero Image */
 .hero {
   min-height: 78vh;
   padding: 7rem 0 6rem;
-  background:
+  background-image:
     linear-gradient(rgba(47, 49, 51, 0.55), rgba(47, 49, 51, 0.72)),
-    url("hero-cleaning.jpg");
+    url("./hero-cleaning.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: center center;
+  background-repeat: no-repeat;
   background-attachment: fixed;
-  color: #f5f3ef;
+  color: var(--ivory);
   display: flex;
   align-items: center;
 }
@@ -359,6 +352,7 @@ img {
   margin: 1rem 0;
 }
 
+/* Dark Panels */
 .dark-panel {
   background: var(--charcoal);
   color: var(--ivory);
@@ -439,7 +433,7 @@ img {
   font-weight: 600;
 }
 
-/* Subpage Hero */
+/* Subpage Header */
 .page-hero {
   padding: 4rem 0;
   background:
@@ -628,7 +622,7 @@ body.dark-mode .gallery-item {
     min-height: 70vh;
     padding: 4rem 0;
     background-attachment: scroll;
-    background-position: center;
+    background-position: center center;
   }
 
   .hero-card {
