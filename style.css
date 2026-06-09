@@ -231,7 +231,7 @@ img {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  color: var(--ivory);
+  color: #f5f3ef;
   display: flex;
   align-items: center;
 }
